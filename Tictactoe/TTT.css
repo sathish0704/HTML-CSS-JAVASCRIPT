@@ -1,0 +1,241 @@
+*,*::after,*::before
+{
+    box-sizing: border-box;
+}
+
+:root
+{
+    --cell-size:200px;
+    --mark-size:calc(var(--cell-size)*0.9);
+}
+
+body
+{
+    margin: 0;
+    background: url(game.jpg);
+}
+
+header
+{
+    background-color: rgb(220, 231, 236);
+    padding: 5px;
+    font-size: 100PX;
+    text-align: center;
+    position: absolute;
+    right: 34%;
+    color: black;
+    border-radius: 20px;
+    margin: 10px;
+    box-shadow: 0px 4px 25px #ccc;
+
+}
+
+.board
+{
+    background-color: rgba(131, 30, 30, 0.541);
+    width: 100vw;
+    height: 100vh;
+    display: grid;
+    justify-content: center;
+    align-items: center;
+    justify-items: center;
+    align-content: center;
+    grid-template-columns:repeat(3,auto) ;
+    position: relative;
+    cursor:pointer;
+    
+}
+
+.cell
+{
+    width: var(--cell-size);
+    height: var(--cell-size);
+    border: 1px solid white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    cursor: pointer;
+    
+}
+
+.cell:first-child,.cell:nth-child(2),.cell:nth-child(3)
+{
+    border-top: none;
+}
+
+.cell:last-child,.cell:nth-child(7),.cell:nth-child(8)
+{
+    border-bottom: none;
+}
+
+
+.cell:nth-child(3n+1)
+{
+    border-left: none;
+}
+
+.cell:nth-child(3n)
+{
+    border-right: none;
+}
+
+.cell.X::before,
+.cell.X::after
+{
+    background-color: black;
+}
+
+.cell.X,
+.cell.circle
+{
+    cursor: not-allowed;
+}
+
+
+.cell.circle::after
+{
+    background-color: white;
+}
+
+.cell.circle::before
+{
+    background-color: black;
+}
+
+.board.X .cell:not(.X):not(.circle):hover::before,
+.board.X .cell:not(.X):not(.circle):hover::after,
+.board.circle .cell:not(.X):not(.circle):hover::before
+{
+    background-color: rgba(255, 255, 255, 0.836);    
+}
+
+.cell.X::before,
+.cell.X::after,
+.board.X .cell:not(.X):not(.circle):hover::before,
+.board.X .cell:not(.X):not(.circle):hover::after
+{
+    content: "";
+    position: absolute;
+    width: calc(var(--mark-size)*0.15);
+    height: var(--mark-size);
+    background-color: rgba(255, 255, 255, 0.808);
+    box-shadow: 0px 4px 25px #ccc;
+}
+
+
+.cell.X::before,
+.board.X .cell:not(.X):not(.circle):hover::before
+{
+    transform: rotate(45deg);
+}
+
+.cell.X::after,
+.board.X .cell:not(.X):not(.circle):hover::after
+{
+    transform: rotate(-45deg);
+}
+
+.cell.circle::before,
+.cell.circle::after,
+.board.circle .cell:not(.X):not(.circle):hover::before,
+.board.circle .cell:not(.X):not(.circle):hover::after
+{
+    content: "";
+    position: absolute;
+    border-radius: 50%;
+    background-color: rgba(240, 248, 255, 0.466);
+    box-shadow: 0px 4px 25px #ccc;
+}
+
+.cell.circle::before,
+.board.circle .cell:not(.X):not(.circle):hover::before
+{
+    width: var(--mark-size);
+    height: var(--mark-size);
+}
+
+
+.cell.circle::after,
+.board.circle.cell:not(.X):not(.circle):hover::after
+{
+    width: calc(var(--mark-size)*0.8);
+    height: calc(var(--mark-size)*0.8);
+    background-color: white;
+}
+
+
+.winning-message
+{
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    font-size: 5rem;
+    flex-direction: column;
+    background-color: rgba(26, 14, 92, 0.753);
+    
+}
+
+.winning-message > button
+{
+    font-size: 2rem;
+    background-color: rgb(57, 42, 196);
+    border-radius: 10px;
+    color: white;
+    padding: 10px 20px;    
+    border: 1px solid white; 
+    box-shadow: 0px 4px 25px #ccc;
+}
+.winning-message > button:hover
+{
+    background-color: rgb(58, 1, 27);
+    color: white;
+    border-color: white;
+    box-shadow: rgba(196, 86, 7, 0.555);
+    box-shadow: 0px 4px 25px #ccc;
+}
+
+.winning-message.show
+{
+    display: flex;
+}
+    
+
+#winmsg
+{
+    background-image: url(bgwin.jpg);
+    width: 30%;
+    border: 2px solid rgb(255, 255, 255);
+    text-align: center;
+    border-radius: 20px;
+    color: rgb(235, 118, 72);
+    box-shadow: 0px 4px 25px #ccc;
+}
+
+img
+{
+    width: 290px;
+    height: 290px;
+    border:2px solid #fff;
+    background: url(img/duck.png) no-repeat;
+    -moz-box-shadow: 0px 6px 5px #ccc;
+    -webkit-box-shadow: 0px 6px 5px #ccc;
+    box-shadow: 0px 4px 25px #ccc;
+    -moz-border-radius:190px;
+    -webkit-border-radius:190px;
+    border-radius:190px;
+}
+
+.pnssg
+{
+    width: 200px;
+    height: 200px;
+    position: absolute;
+    color: black;
+}
