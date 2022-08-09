@@ -1,0 +1,137 @@
+ *
+ {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+ }
+
+ body, .bg-container
+{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    border: none;
+    background-color: rgb(68, 34, 148);
+}
+
+.clock
+{
+    width: 250px;
+    height: 250px;
+    position: relative;
+    bottom: 200px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-image: url(clock.png);
+    background-size: cover;
+    border: 7px solid #e0ebf0;
+    border-radius: 50%;
+    box-shadow: 0 -5px 5px rgba(238, 230, 230, 0.411),
+                inset 0 -5px 5px rgba(235, 228, 228, 0.404),
+                0 5px 5px rgba(241, 238, 238, 0.664),
+                inset 0 5px 5px rgba(236, 225, 225, 0.548); 
+}
+
+.clock::before
+{
+    content: '';
+    position: absolute;
+    width: 15px;
+    height: 15px;
+    background: #fff;
+    border-radius: 50%;
+    z-index: 10000;
+}
+.clock .hour,
+.clock .min,
+.clock .sec
+{
+position: absolute;
+}
+
+.clock .hour, .hr{
+    width: 160px;
+    height: 160px;
+}
+
+
+.clock .min, .mn{
+    width: 230px;
+    height: 230px;
+}
+
+
+.clock .sec, .sc{
+    width: 230px;
+    height: 230px;
+}
+
+
+.hr, .mn, .sc
+{
+display: flex;
+justify-content: center;
+/*align-items: center;*/
+position: absolute;
+border-radius: 50%;
+}
+
+.hr:before
+{
+    content: '';
+    position: absolute;
+    width: 8px;
+    height: 80px;
+    background: #ff105e;
+    z-index: 10;
+    border-radius: 6px 6px 0 0;
+}
+
+.mn:before
+{
+    content: '';
+    position: absolute;
+    width: 4px;
+    height: 110px;
+    background: #fff;
+    z-index: 11;
+    border-radius: 6px 6px 0 0;
+}
+
+.sc:before
+{
+    content: '';
+    position: absolute;
+    width: 2px;
+    height: 150px;
+    background: #fff;
+    z-index: 12;
+    border-radius: 6px 6px 0 0;
+}
+
+h1
+{
+    position: absolute;
+    text-align: center;
+    float: top;
+    bottom: 80%;
+    color: white;
+    font-family: sans-serif;
+    text-decoration:wavy;
+    font-size: 25PX;
+    border: 15px solid rgb(53, 40, 90);
+    border-radius: 30px;
+    padding: 20px;
+}
+
+.bg-container {
+    background-image: url(wallgb.jpg);
+    background-position: center;
+    width:100vw;
+    height:100vh; 
+    box-sizing:border-box;
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+  }
