@@ -1,0 +1,466 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Dancing+Script:wght@700&family=Poppins&display=swap');
+
+*
+{
+    margin: 0px;
+    padding: 0px;
+}
+body{
+    margin: 0px;
+    width: 100%;
+}
+
+
+/*top nav bar*/
+
+.navbar
+{
+    width: 100%;
+    height: 50%;
+    background-color: black;
+    color: white;
+}
+.navbar ul li
+{
+    color: cornsilk;
+    font-weight: 500;
+    text-align: center;
+    margin: 12px;
+    font-size: 20px;
+    display: inline-block;
+    position: relative;
+    justify-content: center;
+    align-items: center;
+    left: 130%;
+    font-family: 'Bebas Neue', cursive;
+    font-family: 'Poppins', sans-serif;
+}
+.navbar h1{
+    font-family: sans-serif;
+    padding: 10px;
+    color: gold;
+    text-shadow: 1px 1px 2px whitesmoke, 2px 1px 2px whitesmoke, 3px 1px 2px whitesmoke;
+    position: absolute;
+    
+}
+.navbar ul li:hover
+{
+    border-bottom: 2px solid green;
+    transition-delay: 1ms;
+    color: rgb(214, 212, 200);
+    text-shadow: 1px 1px 2px whitesmoke;
+}
+
+/*slider*/
+#carouselExampleIndicators
+{
+    position: relative;
+    top: 500px;
+    width: 100%;
+    height: 451px;
+}
+.carousel-item img
+{
+    width: fit-content;
+    height: 650px;
+    position: relative;
+    bottom: 120px;
+}
+
+/*video tag*/
+.video-container {
+    height: 100%;
+    width: 100%;
+    position: relative;
+}
+
+.video-container video {
+  width: 100%;
+  height: 400%;
+  position: absolute;
+  object-fit: cover;
+  z-index: 0;
+}
+
+.video-container .caption
+{
+    border-radius: 15px;
+    width: 40%;
+  z-index: 1;
+  position: relative;
+  bottom: 10px;
+  text-align: center;
+  color: rgb(26, 14, 37);
+  padding: 10px;
+  left: 30%;
+  top: 400px;
+}
+#explore:hover
+{
+    background-color: rgb(77, 163, 189);
+    color: rgb(18, 25, 32);
+}
+#explore
+{
+    background-color: rgb(229, 241, 247);
+    border-radius: 10px;
+    width: 50%;
+    font-family: sans-serif;
+    font-size: 25px;
+    margin: 10px;
+    border: 1px solid white;
+}
+
+/*category*/
+.categorycontainer
+{
+    position: relative;
+    width: 100%;
+    height: 250px;
+}
+.mx-auto 
+{
+    align-items: center;
+    justify-content: center;
+    display: table-row;
+    position: relative;
+    top: 400px;
+    left: 530px;
+}
+.categorytypes
+{
+    position: relative;
+    display: table-cell;
+}
+.categorytypes img
+{
+    width: fit-content;
+    height: 180px;
+}
+.categorycontainer h1
+{
+    position: relative;
+    left: 41%;
+    top: 400px;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    font-family: 'Bebas Neue', cursive;
+    font-family: 'Dancing Script', cursive;
+    font-family: 'Poppins', sans-serif;
+}
+.categorytypes img:hover
+{
+    cursor: pointer;
+    width: fit-content;
+    height: 250px;
+    transition-delay: 1s;
+    transition: width 2s, height 2s, transform 2s;
+}
+
+/*addtocart*/
+.addtocart  
+{
+    background-color: rgb(238, 234, 228);
+    display: table-row;
+    position: relative;
+    top: 500px;
+    border-radius: 10px;
+    width: 100%;
+    height: 100px;
+    border-spacing:50px;
+}
+.addtocart  .buynowcolumn  
+{
+    margin: 20px;
+    width: 2000px;
+    align-items: center;
+    justify-content: center;
+    padding-left: 50px  ;
+}
+.buynowcolumn .card {
+    border-radius: 25px;
+    position: relative;
+    display: table-cell;
+    box-shadow: 10px 4px 10px 0 rgba(0, 0, 0, 0.2);
+    max-width: 300px;
+    margin: auto;
+    text-align: center;
+    font-family: arial;
+  }
+  .card img
+  {
+      border-radius: 10px;
+  }
+  .card:hover
+  {
+      color: white;
+      width: 40%;
+      height: fit-content;
+      transition-delay: 2s;
+      transition: width 4s, height 4s, transform 4s;
+      background-color: rgba(15, 18, 20, 0.664);
+  }
+  .card h1
+  {
+      font-size: 25px;
+      margin: 10px;
+      font-family: Arial, Helvetica, sans-serif;
+  }
+  .price {
+    color: grey;
+    font-size: 20px;
+  }
+  
+  .card button {
+    border: none;
+    outline: 0;
+    padding: 12px;
+    color: white;
+    background-color: #000;
+    text-align: center;
+    cursor: pointer;
+    width: 100%;
+    font-size: 18px;
+  }
+  
+  .card button:hover {
+    border-radius: 10px;
+    opacity: 0.5;
+    width: 60%;
+    height: 50%;
+    transition-delay: 0.5s;
+    transition: width 2s, height 2s, transform 2s;
+  } 
+  #Diaheader
+  {
+    font-weight: 200px;
+    text-align: center;
+    font-family: Century Gothic;
+    font-size: 35px;
+    color: rgb(34, 18, 22);
+    text-shadow: #000;
+    position: relative;
+    right: 50px;
+  }
+  #goldheader
+  {
+      font-weight: 200px;
+      text-align: center;
+      font-family: Century Gothic;
+      font-size: 35px;
+      color: rgb(158, 103, 115);
+      text-shadow: #000;
+      position: relative;
+      right: 50px;
+  }
+
+  #DiamondSection
+  {
+      background-color: rgb(160, 168, 173);
+  }
+
+  /*GEnder*/
+.gender
+  {
+      display: table;
+      background-color: rgb(173, 142, 177);
+      margin-top: 10px;
+      width: 100%;
+      text-align: center;
+      justify-content: center;
+  }
+.genderow
+{
+    display: table-row;
+    position: relative;
+    right: 60px;
+}
+.gendercells img
+{
+    border-radius: 20px;
+}
+.gendercells
+{
+    
+    border-radius: 20px;
+    display: table-cell;
+}
+#genderhead
+{
+    position: relative;
+    right: 50px;
+    font-size: 30px;
+    font-family: Century Gothic;
+}
+.gendercells a
+{
+    font-size: 30px;
+    color: #000;
+    text-decoration: none;
+    font-family: Century Gothic;
+}
+.gendercells a:hover
+{
+    color: #000;
+    text-decoration: none;
+    font-size: 35px;
+    transition: 0.2s;
+}
+/*bottomtab1*/
+#bottomt1
+{
+    background-color: rgb(31, 71, 104);
+}
+.bottom1  
+{
+    position: relative;
+    left: 100px;
+    align-items: center;
+    text-align: center;
+    display: table-row;
+    background-color: rgb(72, 58, 124);
+}
+.btext1
+{
+    box-shadow: 2px 5px 25px 5px rgb(218, 224, 223);
+    font-size: 20px;
+    border: 2px solid rgb(59, 68, 59);
+    border-radius: 15px;
+    padding: 50px;
+    color: white;
+    display: table-cell;
+    text-align: center;
+}
+.btext1 p{
+    font-size: 20px;
+    font-family: Century Gothic;
+}
+
+/*bottomtablast*/
+.endbtmtab
+{
+    display: table;
+    width: 100%;
+    background-image: url(images/bggold.jpg);
+    background-position: cover;
+    height: 500px;
+}
+.btmtabrow
+{
+    position: relative;
+    right: 120px;
+    display: table-row;
+}
+.btm2cell
+{
+    padding-left: 150px;
+    text-align: center;
+    display: table-cell;
+}
+.btm2cell a{
+    font-family: Century Gothic;
+    font-size: 23px;
+    color: white;
+    text-decoration: none;
+}
+.btm2cell a:hover{
+    text-decoration: none;
+}
+.btm2cell p{
+    color: white;
+}
+#Subscribe
+{
+    font-size: 20px;
+    color: white;
+    background-color: rgb(126, 30, 75);
+    width: 150px;
+    height: 50px;
+    border-radius: 25px;
+}
+#Subscribe:hover
+{
+    color:black;
+    background-color:white;
+    width: 170px;
+    height: 60px;
+    border-radius: 25px;
+}
+#emailtxt
+{
+    width: 300px;
+    height: 40px;
+    margin: 20px;
+    padding: 10px;
+}
+
+.copyrights 
+{
+    position: relative;
+    left: 600px;
+    text-align: center;
+    color: white;
+    font-size: 13px;
+    align-items: bottom;
+    align-items: center;
+    justify-content: center;
+}
+
+/*dropdown*/
+/* Dropdown Button */
+.dropbtn {
+    background-color: black;
+    padding: 16px;
+    font-size: 16px;
+    border: none;
+    color: cornsilk;
+    font-size: 20px;
+    font-family: 'Bebas Neue', cursive;
+    font-family: 'Poppins', sans-serif;
+  }
+  
+  .dropdown {
+    position: relative;
+    display: inline-block;
+    
+  }
+  
+  .dropdown-content {
+    display: none;
+    position: absolute;
+    text-decoration: none;
+    background-color:black;
+    color: cornsilk;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+  }
+  
+  /* Links inside the dropdown */
+  .dropdown-content a {
+    color: cornsilk;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+  }
+  
+  .dropdown-content a:hover {border-bottom: 2px solid green;}
+  
+  .dropdown:hover .dropdown-content {display: block;}
+  
+  .dropdown:hover .dropbtn {
+    border-bottom: 2px solid green;
+    color: cornsilk;
+    }
+
+    /*navbar sticky*/
+.sticky 
+{
+    position: fixed;
+    top: 0;
+    width: 100%;
+}
+.sticky + .content 
+{
+    padding-top: 60px;
+}
